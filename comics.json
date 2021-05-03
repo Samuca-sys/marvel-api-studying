@@ -1,0 +1,159 @@
+{
+  "comics": 
+    {
+      "results": [
+        {
+          "id": 60602,
+          "title": "Deadpool (2015) #28",
+          "issueNumber": 28,
+          "description": "Deadpool's whirlwind romance with Shiklah was one of the most exciting times of his life. Traveling across the world, fighting all sorts of threats at her side, and finally marrying her as a way to thwart the evil vampire lord, Dracula. But since then, the reality has set in. Shiklah is a demon succubus, and more than that, the Queen of the monster kingdom hidden beneath Manhattan...and the problems between them continue to pile up.\nNow, when an affront to Shiklah's people demands justice, a line is crossed. As the Monster Metropolis declares war on the surface world, Deadpool must choose between the wife to whom he's pledged himself and the role he's been crafting for himself as a hero. Also featuring Spider-Man and the Mercs for Money, this is one domestic dispute that's really going to break some things up.",
+          "modified": "2017-03-02T11:29:55-0500",
+            
+          "pageCount": 32,
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/60602",
+          "dates": [
+            {
+              "type": "onsaleDate",
+              "date": "2017-03-01T00:00:00-0500"
+            },
+            {
+              "type": "focDate",
+              "date": "2017-03-01T00:00:00-0500"
+            }
+          ],
+          "prices": [
+            {
+              "type": "printPrice",
+              "price": 3.99
+            }
+          ],
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/70/58b0a1463b05a",
+            "extension": "jpg"
+          } 
+        },
+        {
+          "id": 60601,
+          "title": "Deadpool (2015) #27",
+          "issueNumber": 27,
+            
+          "description": "Steve Rogers is Captain America, the bastion of all that is good. He’s the kind of paragon who Deadpool could really take a lesson from. I’m not caught up on his recent comics, but I can’t imagine anything could change that.",
+          "modified": "2017-02-10T11:01:40-0500",
+          "pageCount": 32,
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/60601",
+          "dates": [
+            {
+              "type": "onsaleDate",
+              "date": "2017-02-15T00:00:00-0500"
+            },
+            {
+              "type": "focDate",
+              "date": "2017-01-25T00:00:00-0500"
+            }
+          ],
+          "prices": [
+            {
+              "type": "printPrice",
+              "price": 3.99
+            }
+          ],
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/50/589a44b869b73",
+            "extension": "jpg"
+          }
+        },
+        {
+          "id": 60600,
+          "title": "Deadpool (2015) #26",
+          "issueNumber": 26,
+          "description": "It’s February, so Love is in the air! So of course, we’re guest-starring the one character no one can kiss! That’s right: Rogue is stopping by for an adventure!",
+          "modified": "2017-01-27T18:10:17-0500",
+          "pageCount": 32,
+          "textObjects": [
+            {
+              "type": "issue_solicit_text",
+              "language": "en-us",
+              "text": "It’s February, so Love is in the air! So of course, we’re guest-starring the one character no one can kiss! That’s right: Rogue is stopping by for an adventure!"
+            }
+          ],
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/60600",
+          "dates": [
+            {
+              "type": "onsaleDate",
+              "date": "2017-02-01T00:00:00-0500"
+            },
+            {
+              "type": "focDate",
+              "date": "2017-01-09T00:00:00-0500"
+            }
+          ],
+          "prices": [
+            {
+              "type": "printPrice",
+              "price": 3.99
+            }
+          ],
+          "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/c0/588b7090570ec",
+           "extension": "jpg"
+         }
+        },
+        {
+          "id": 60599,
+          "title": "Deadpool (2015) #25",
+          "issueNumber": 25,
+          "description": "DEADPOOL 2099 reaches its DOUBLE-SIZED CONCLUSION! Wade’s two daughters battle for his legacy! PLUS: The old man himself gets in the game! AND: IRON FIST shows just how IMMORTAL he is!",
+          "modified": "2017-01-18T11:46:43-0500",
+          "pageCount": 48,
+          "dates": [
+            {
+              "type": "onsaleDate",
+              "date": "2017-01-25T00:00:00-0500"
+            },
+            {
+              "type": "focDate",
+              "date": "2016-12-19T00:00:00-0500"
+            }
+          ],
+          "prices": [
+            {
+              "type": "printPrice",
+              "price": 5.99
+            }
+          ],
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/90/5878fbfee568a",
+            "extension": "jpg"
+          }
+        },
+        {
+          "id": 60598,
+          "title": "Deadpool (2015) #24",
+          "issueNumber": 24,
+          "description": "“PATIENCE: ZERO” comes to an end! Will Wade make a deal with the devil to save a loved one? Surely no Marvel hero would do such a thing!",
+          "modified": "2017-01-05T16:54:11-0500",
+          "pageCount": 32,
+          "dates": [
+            {
+              "type": "onsaleDate",
+              "date": "2017-01-11T00:00:00-0500"
+            },
+            {
+              "type": "focDate",
+              "date": "2016-12-12T00:00:00-0500"
+            }
+          ],
+          "prices": [
+            {
+              "type": "printPrice",
+              "price": 3.99
+            }
+          ],
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/c0/586eb66144a83",
+            "extension": "jpg"
+          }
+        }
+      ]
+    }
+}
