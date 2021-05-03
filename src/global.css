@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+button {
+	background: transparent;
+	border: none;
+}
+
+@media (max-width: 400px) {
+	html {
+		font-size: 70%;
+		border-style: none;
+	}
+}
+@media (min-width: 400px) and (max-width: 1150px) {
+	html {
+		font-size: 87.5%;
+	}
+}
+@media (min-width: 1150px) {
+	html {
+		font-size: 93.75%;
+	}
+}

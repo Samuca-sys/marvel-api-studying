@@ -1,0 +1,23 @@
+@media (max-width: 400px) {
+	input {
+		width: 10rem;
+	}
+}
+
+.headerContainer {
+	background: #f0141e;
+	margin-bottom: 2rem;
+}
+
+.headerContent {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logoImage {
+	height: 4rem;
+}
