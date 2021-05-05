@@ -1,35 +1,30 @@
-import React from 'react';
-
-import { FaSearch } from 'react-icons/fa';
+import React, { useState } from 'react';
 
 import './styles.css';
-export default class Search extends React.Component {
-	state = {
-		comicTitle: '',
-	};
+export default function Search() {
+	const [comicTitle, setComicTitle] = useState('');
 
-	handleChangeSearchText = (event) => {
-		this.setState({
-			[event.target.name]: event.target.value,
-		});
-	};
-
-	render() {
-		return (
-			<div className='searchContainer'>
-				<form>
-					<input
-						type='text'
-						placeholder='Search...'
-						name='comicTitle'
-						value={this.state.comicTitle}
-						onChange={this.handleChangeSearchText}
-					/>
-					<button type='submit'>
-						<FaSearch className='searchIcon' />
-					</button>
-				</form>
-			</div>
-		);
+	function handleChangeSearchText(event) {
+		setComicTitle(event.target.value);
 	}
+
+	function handleKeyEnter(event) {
+		if (event.key === 'Enter') {
+			setComicTitle(event.target.value);
+			setComicTitle('');
+		}
+	}
+
+	return (
+		<div className='searchContainer'>
+			<input
+				type='text'
+				placeholder='Search...'
+				name='comicTitle'
+				value={comicTitle}
+				onChange={handleChangeSearchText}
+				onKeyPress={handleKeyEnter}
+			/>
+		</div>
+	);
 }

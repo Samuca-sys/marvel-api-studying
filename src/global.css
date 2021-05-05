@@ -5,6 +5,10 @@
 	font-family: Arial, sans-serif;
 }
 
+body {
+	background: gray;
+}
+
 button {
 	background: transparent;
 	border: none;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Spinner from 'react-spinkit';
 
@@ -8,42 +8,42 @@ import { api } from '../../services/api';
 
 import './styles.css';
 
-class List extends React.Component {
-	state = {
-		comics: [],
-		isLoading: true,
-	};
+export function List() {
+	const [comics, setComics] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
 
-	componentDidMount() {
-		this.getComics();
-	}
-	getComics = async () => {
+	useEffect(() => {
+		getComics();
+	}, []);
+
+	const getComics = async function getComics() {
 		try {
-			const res = await api.get('/comics');
-
-			this.setState({
-				comics: res.data.results,
-				isLoading: false,
+			const res = await api.get('/comics', {
+				params: {
+					limit: 10,
+					format: 'comic',
+					startYear: '2021',
+					noVariants: true,
+				},
 			});
+			setComics(res.data.data.results);
+			setIsLoading(false);
 		} catch (error) {
 			console.log(error, 'Error');
 		}
 	};
 
-	render() {
-		const { comics, isLoading } = this.state;
-		return isLoading ? (
-			<div className='spinnerContainer'>
-				<Spinner name='ball-spin-fade-loader' className='spinner' />
-			</div>
-		) : (
-			<div className='listContainer'>
-				{comics.map((item) => (
-					<ListItem key={item.id} comic={item} />
-				))}
-			</div>
-		);
-	}
+	return isLoading ? (
+		<div className='spinnerContainer'>
+			<Spinner name='ball-spin-fade-loader' className='spinner' />
+		</div>
+	) : (
+		<div className='listContainer'>
+			{comics.map((item) => (
+				<ListItem key={item.id} comic={item} />
+			))}
+		</div>
+	);
 }
 
 export default List;

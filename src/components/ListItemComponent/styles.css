@@ -9,6 +9,7 @@
 	border-radius: 1rem;
 	padding: 1rem;
 	justify-content: flex-start;
+	cursor: pointer;
 }
 
 .itemContent {

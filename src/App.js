@@ -5,15 +5,13 @@ import Header from './components/HeaderComponent/Header';
 
 import './global.css';
 
-class App extends React.Component {
-	render() {
-		return (
-			<>
-				<Header />
-				<List />
-			</>
-		);
-	}
+function App() {
+	return (
+		<>
+			<Header />
+			<List />
+		</>
+	);
 }
 
 export default App;
