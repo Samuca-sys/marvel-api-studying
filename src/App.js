@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ModalContextProvider } from './contexts/ModalContext';
 import { ComicContextProvider } from './contexts/ComicContext';
 
 import List from './components/ListComponent/List';
@@ -9,10 +10,12 @@ import './global.css';
 
 function App() {
 	return (
-		<ComicContextProvider>
-			<Header />
-			<List />
-		</ComicContextProvider>
+		<ModalContextProvider>
+			<ComicContextProvider>
+				<Header />
+				<List />
+			</ComicContextProvider>
+		</ModalContextProvider>
 	);
 }
 

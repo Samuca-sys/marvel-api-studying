@@ -1,13 +1,23 @@
-import React from 'react';
+import { useContext } from 'react';
+
+import { ModalContext } from '../../contexts/ModalContext';
 
 import './styles.css';
 
 export default function ListItem(props) {
 	const { comic } = props;
 	const { path, extension } = comic.thumbnail;
-	const { title, issueNumber, pageCount, dates, prices } = comic;
+	const { title, pageCount, prices, id } = comic;
+	const { setComicId } = useContext(ModalContext);
+	const price = prices[0].price * 5.24;
+
 	return (
-		<div className='itemContainer'>
+		<div
+			className='itemContainer'
+			onClick={() => {
+				setComicId(id);
+			}}
+		>
 			<div className='itemContent'>
 				<div className='comic-thumbnail-container'>
 					<img
@@ -17,20 +27,23 @@ export default function ListItem(props) {
 					/>
 				</div>
 				<div>
-					<h3>{title}</h3>
-					<p>
-						<strong>Issue:</strong> {issueNumber}
-					</p>
-					<p>
-						<strong>Pages:</strong> {pageCount}
-					</p>
-					<p>
-						<strong>Date:</strong>
-						{new Date(dates[0].date).toLocaleDateString()}
-					</p>
-					<p>
-						<strong>Price:</strong> ${prices[0].price}
-					</p>
+					<h1>{title}</h1>
+					<div className='itemDetails'>
+						<div>
+							<strong>Pages:</strong>
+							<span>{pageCount}</span>
+						</div>
+
+						<div>
+							<strong>Price:</strong>
+							<span>
+								{price.toLocaleString('pt-BR', {
+									style: 'currency',
+									currency: 'BRL',
+								})}
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

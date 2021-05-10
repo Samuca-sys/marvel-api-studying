@@ -4,8 +4,7 @@
 }
 
 .itemContainer {
-	background-color: whitesmoke;
-	border: 1px solid #333;
+	background-color: #f5f5f5;
 	border-radius: 1rem;
 	padding: 1rem;
 	justify-content: flex-start;
@@ -18,6 +17,13 @@
 	grid-template-columns: 25% 70%;
 }
 
+.itemDetails strong {
+	margin-right: 0.5rem;
+}
+.itemDetails div:last-of-type strong {
+	margin-right: 1rem;
+}
+
 .comic-thumbnail-container {
 	width: 100%;
 }
@@ -27,6 +33,8 @@
 	display: flex;
 }
 
-h3 {
+h1 {
 	margin-bottom: 0.5rem;
+	font-weight: 700;
+	font-size: 1rem;
 }

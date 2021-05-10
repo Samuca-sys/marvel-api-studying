@@ -3,6 +3,17 @@
 		width: 10rem;
 	}
 }
+@media (max-width: 1150px) {
+	.logoImage {
+		margin-left: calc(1rem - 2px);
+	}
+	.listContainer {
+		width: calc(100% - 2rem);
+	}
+	.searchContainer {
+		margin: 0 1rem 0 0;
+	}
+}
 
 .headerContainer {
 	background: #f0141e;
