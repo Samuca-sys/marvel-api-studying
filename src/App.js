@@ -1,9 +1,10 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import { ModalContextProvider } from './contexts/ModalContext';
 import { ComicContextProvider } from './contexts/ComicContext';
 
-import List from './components/ListComponent/List';
+import Routes from './routes/Routes';
 import Header from './components/HeaderComponent/Header';
 
 import './global.css';
@@ -12,8 +13,10 @@ function App() {
 	return (
 		<ModalContextProvider>
 			<ComicContextProvider>
-				<Header />
-				<List />
+				<BrowserRouter>
+					<Header />
+					<Routes />
+				</BrowserRouter>
 			</ComicContextProvider>
 		</ModalContextProvider>
 	);

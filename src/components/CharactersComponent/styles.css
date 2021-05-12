@@ -1,0 +1,6 @@
+.charactersContainer {
+	max-width: 1120px;
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+}
