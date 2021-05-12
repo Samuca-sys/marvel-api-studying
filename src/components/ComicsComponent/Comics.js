@@ -3,11 +3,11 @@ import { useContext } from 'react';
 import Spinner from 'react-spinkit';
 import { ComicContext } from '../../contexts/ComicContext';
 
-import ListItem from '../ListItemComponent/ListItem';
+import ComicItem from '../ComicItemComponent/ComicItem';
 
 import './styles.css';
 
-export function List() {
+export function Comics() {
 	const { isLoading, comics } = useContext(ComicContext);
 
 	return isLoading ? (
@@ -15,12 +15,12 @@ export function List() {
 			<Spinner name='ball-spin-fade-loader' className='spinner' />
 		</div>
 	) : (
-		<div className='listContainer'>
+		<div className='comicsContainer'>
 			{comics.map((item) => (
-				<ListItem key={item.id} comic={item} />
+				<ComicItem key={item.id} comic={item} />
 			))}
 		</div>
 	);
 }
 
-export default List;
+export default Comics;

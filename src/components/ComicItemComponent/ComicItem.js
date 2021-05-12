@@ -4,7 +4,7 @@ import { ModalContext } from '../../contexts/ModalContext';
 
 import './styles.css';
 
-export default function ListItem(props) {
+export default function ComicItem(props) {
 	const { comic } = props;
 	const { path, extension } = comic.thumbnail;
 	const { title, pageCount, prices, id } = comic;

@@ -1,21 +1,21 @@
 @media (min-width: 720px) {
-	.listContainer {
+	.comicsContainer {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 @media (min-width: 1150px) {
-	.listContainer {
+	.comicsContainer {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media (max-width: 1150px) {
-	.listContainer {
+	.comicsContainer {
 		width: calc(100% - 2rem);
 	}
 }
 
-.listContainer {
+.comicsContainer {
 	max-width: 1120px;
 	margin: 0 auto;
 	display: grid;
