@@ -14,18 +14,18 @@ button {
 	border: none;
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 	html {
 		font-size: 70%;
 		border-style: none;
 	}
 }
-@media (min-width: 400px) and (max-width: 1150px) {
+@media only screen and (min-width: 768px) {
 	html {
 		font-size: 87.5%;
 	}
 }
-@media (min-width: 1150px) {
+@media only screen and (min-width: 992px) {
 	html {
 		font-size: 93.75%;
 	}

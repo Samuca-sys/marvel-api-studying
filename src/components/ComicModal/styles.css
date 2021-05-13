@@ -1,4 +1,4 @@
-@media (max-width: 700px) {
+@media only screen and (max-width: 600px) {
 	.modalContainer {
 		height: 40rem;
 		overflow: scroll;
@@ -32,7 +32,46 @@
 		font-size: 1rem;
 	}
 }
-@media (min-width: 700px) {
+@media only screen and (min-width: 600px) {
+	.modalContent {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.modalContent img {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	.info {
+		position: relative;
+
+		padding: 0 1rem;
+	}
+	.info main {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.info main p {
+		display: flex;
+	}
+	.info .modalDetails {
+		margin-top: 1rem;
+	}
+	.info footer {
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+	}
+	footer span {
+		font-size: 0.7rem;
+	}
+}
+@media only screen and (min-width: 768px) {
 	.modalContent {
 		display: grid;
 		gap: 1rem;

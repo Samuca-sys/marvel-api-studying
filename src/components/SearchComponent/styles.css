@@ -1,9 +1,27 @@
-.searchContainer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: white;
-	margin: 0 0.25rem 0 0;
+@media only screen and (max-width: 600px) {
+	.searchContainer {
+		display: none;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.searchContainer {
+		display: none;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.searchContainer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: white;
+		margin-right: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.searchContainer {
+		margin-right: 0;
+	}
 }
 
 form {

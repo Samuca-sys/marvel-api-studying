@@ -1,14 +1,72 @@
-@media (max-width: 400px) {
-	input {
-		width: 10rem;
+@media only screen and (max-width: 600px) {
+	.logoImage {
+		margin-left: 1rem;
+	}
+	nav ul {
+		display: none;
+	}
+	.mobileIcon {
+		display: flex;
+		position: absolute;
+
+		left: calc(100% - 1rem);
+		transform: translate(-100%, 60%);
+		cursor: pointer;
+		color: #fff;
+		font-size: 2rem;
+		align-items: center;
+		height: 2rem;
 	}
 }
-@media (max-width: 1150px) {
-	.logoImage {
-		margin-left: calc(1rem - 2px);
+
+@media only screen and (min-width: 600px) {
+	nav {
+		align-items: center;
 	}
-	.searchContainer {
-		margin: 0 1rem 0 0;
+	nav ul {
+		display: none;
+	}
+	.logoImage {
+		margin-left: 1rem;
+	}
+	.mobileIcon {
+		display: flex;
+		position: absolute;
+
+		left: calc(100% - 1rem);
+		transform: translate(-100%, 60%);
+		cursor: pointer;
+		color: #fff;
+		font-size: 2rem;
+		align-items: center;
+		height: 2rem;
+		top: 25%;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.logoImage {
+		margin-left: 1rem;
+	}
+	.mobileIcon {
+		display: none;
+	}
+	nav ul {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.logoImage {
+		margin-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.logoImage {
+		margin-left: 0;
 	}
 }
 
@@ -18,18 +76,19 @@
 }
 
 .headerContent {
-	max-width: 1120px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 2rem 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
 }
 
-.headerContent div {
+/* .headerContent nav div {
 	display: flex;
 	align-items: center;
-}
+} */
 
 .logoImage {
 	height: 4rem;
@@ -38,15 +97,16 @@
 nav {
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-end;
 }
 
-nav a:first-child {
-	margin-left: 2rem;
+nav ul {
+	margin-left: 1rem;
 }
 
-a {
+ul a {
 	display: flex;
-	flex-direction: row;
+	/* flex-direction: row; */
 	align-items: center;
 	text-decoration: none;
 	color: #f0141e;
@@ -55,6 +115,14 @@ a {
 	font-size: 1rem;
 	margin: 1rem 1rem 1rem 0;
 	padding: 1rem;
+}
+
+ul a.active {
+	color: #000;
+}
+
+ul div {
+	display: flex;
 }
 
 a span {

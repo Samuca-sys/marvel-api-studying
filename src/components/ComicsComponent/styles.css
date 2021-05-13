@@ -1,22 +1,34 @@
-@media (min-width: 720px) {
+@media only screen and (max-width: 600px) {
 	.comicsContainer {
-		grid-template-columns: repeat(2, 1fr);
+		width: calc(100% - 2rem);
 	}
 }
-@media (min-width: 1150px) {
-	.comicsContainer {
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-
-@media (max-width: 1150px) {
+@media only screen and (min-width: 600px) {
 	.comicsContainer {
 		width: calc(100% - 2rem);
 	}
 }
 
+@media only screen and (min-width: 768px) {
+	.comicsContainer {
+		grid-template-columns: repeat(2, 1fr);
+		width: calc(100% - 2rem);
+	}
+}
+@media only screen and (min-width: 992px) {
+	.comicsContainer {
+		grid-template-columns: repeat(3, 1fr);
+		width: calc(100% - 2rem);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.comicsContainer {
+	}
+}
+
 .comicsContainer {
-	max-width: 1120px;
+	max-width: 1200px;
 	margin: 0 auto;
 	display: grid;
 	gap: 1rem;
