@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+
+import { AiOutlineSearch } from 'react-icons/ai';
 
 import './styles.css';
 export default function Search() {
 	const [comicTitle, setComicTitle] = useState('');
+	const isMobile = useMediaQuery({ query: '(max-device-width: 767px)' });
 
 	function handleChangeSearchText(event) {
 		setComicTitle(event.target.value);
@@ -16,10 +20,12 @@ export default function Search() {
 	}
 
 	return (
-		<div className='searchContainer'>
+		<div className={isMobile ? 'mobileSearch' : 'searchContainer'}>
+			{isMobile && <AiOutlineSearch />}
 			<input
+				className={isMobile ? 'mobileInput' : ''}
+				placeholder={isMobile ? '' : 'Search...'}
 				type='text'
-				placeholder='Search...'
 				name='comicTitle'
 				value={comicTitle}
 				onChange={handleChangeSearchText}

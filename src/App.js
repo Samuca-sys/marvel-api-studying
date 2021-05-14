@@ -5,7 +5,7 @@ import { ModalContextProvider } from './contexts/ModalContext';
 import { ComicContextProvider } from './contexts/ComicContext';
 
 import Routes from './routes/Routes';
-import Header from './components/HeaderComponent/Header';
+import NavBar from './components/NavBarComponent/NavBar';
 
 import './global.css';
 
@@ -14,7 +14,7 @@ function App() {
 		<ModalContextProvider>
 			<ComicContextProvider>
 				<BrowserRouter>
-					<Header />
+					<NavBar />
 					<Routes />
 				</BrowserRouter>
 			</ComicContextProvider>
