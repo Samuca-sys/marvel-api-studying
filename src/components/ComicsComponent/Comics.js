@@ -8,18 +8,23 @@ import ComicItem from '../ComicItemComponent/ComicItem';
 import './styles.css';
 
 export function Comics() {
-	const { isLoading, comics } = useContext(ComicContext);
+	const { isLoading, comics, handleMore } = useContext(ComicContext);
 
 	return isLoading ? (
 		<div className='spinnerContainer'>
 			<Spinner name='ball-spin-fade-loader' className='spinner' />
 		</div>
 	) : (
-		<div className='comicsContainer'>
-			{comics.map((item) => (
-				<ComicItem key={item.id} comic={item} />
-			))}
-		</div>
+		<>
+			<div className='comicsContainer'>
+				{comics.map((item, index) => (
+					<ComicItem key={index} comic={item} />
+				))}
+			</div>
+			<div className='buttonMore'>
+				<button onClick={handleMore}>More</button>
+			</div>
+		</>
 	);
 }
 

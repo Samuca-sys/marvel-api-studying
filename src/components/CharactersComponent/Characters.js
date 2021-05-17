@@ -8,18 +8,23 @@ import CharacterItem from '../CharacterItemComponent/CharacterItem';
 import './styles.css';
 
 export function Characters() {
-	const { isLoading, characters } = useContext(CharacterContext);
+	const { isLoading, characters, handleMore } = useContext(CharacterContext);
 
 	return isLoading ? (
 		<div className='spinnerContainer'>
 			<Spinner name='ball-spin-fade-loader' className='spinner' />
 		</div>
 	) : (
-		<div className='charactersContainer'>
-			{characters.map((item) => (
-				<CharacterItem key={item.id} character={item} />
-			))}
-		</div>
+		<>
+			<div className='charactersContainer'>
+				{characters.map((item) => (
+					<CharacterItem key={item.id} character={item} />
+				))}
+			</div>
+			<div className='buttonMore'>
+				<button onClick={handleMore}>More</button>
+			</div>
+		</>
 	);
 }
 

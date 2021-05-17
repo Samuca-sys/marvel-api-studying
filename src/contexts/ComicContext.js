@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useCallback } from 'react';
 
 import { api } from '../services/api';
 
@@ -16,10 +16,9 @@ export function ComicContextProvider({ children }) {
 		try {
 			const res = await api.get('/comics', {
 				params: {
-					limit: 10,
 					format: 'comic',
-					startYear: '2001',
 					noVariants: true,
+					orderBy: 'title',
 				},
 			});
 			setComics(res.data.data.results);
@@ -29,11 +28,30 @@ export function ComicContextProvider({ children }) {
 		}
 	};
 
+	const handleMore = useCallback(async () => {
+		try {
+			const offset = comics.length;
+			const res = await api.get('/comics', {
+				params: {
+					offset,
+					limit: 4,
+					orderBy: 'title',
+					format: 'comic',
+					noVariants: true,
+				},
+			});
+			setComics([...comics, ...res.data.data.results]);
+		} catch (error) {
+			console.log('Error getting more comics' + error);
+		}
+	}, [comics]);
+
 	return (
 		<ComicContext.Provider
 			value={{
 				comics,
 				isLoading,
+				handleMore,
 			}}
 		>
 			{children}

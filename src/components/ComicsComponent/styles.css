@@ -38,3 +38,26 @@
 	margin-left: 50%;
 	grid-template-columns: 1fr;
 }
+.buttonMore {
+	display: flex;
+	justify-content: center;
+}
+.pulseButton {
+	display: flex;
+	justify-content: center;
+}
+
+.buttonMore button {
+	background: #f0141e;
+	margin: 1rem 2rem 0 2rem;
+	border-radius: 1rem 1rem 0 0;
+	padding: 1rem 10rem;
+	color: #f5f5f5;
+	box-shadow: rgb(0 0 0 / 30%) 2px 2px 10px 1px;
+	cursor: pointer;
+}
+
+.buttonMore button:hover {
+	background: #f1c40f;
+	color: #000;
+}
