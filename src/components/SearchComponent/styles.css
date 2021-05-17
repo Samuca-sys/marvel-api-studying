@@ -47,7 +47,7 @@ input {
 
 .mobileSearch svg {
 	font-size: 1.5rem;
-	color: #f5f5f5;
+	color: var(--white);
 }
 
 .mobileInput {
@@ -60,6 +60,6 @@ input {
 	align-items: center;
 	/* text-align: center; */
 	background: transparent;
-	color: #f5f5f5;
-	border-bottom: 1px solid #f5f5f5;
+	color: var(--white);
+	border-bottom: 1px solid var(--white);
 }

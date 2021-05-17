@@ -38,7 +38,7 @@
 }
 
 .spinner {
-	color: #f0141e;
+	color: var(--red);
 	margin-left: 50%;
 	grid-template-columns: 1fr;
 }
