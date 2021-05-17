@@ -12,20 +12,14 @@ export function ComicModal() {
 	const { closeComicModal, isLoading, comic } = useContext(ModalContext);
 
 	const { path, extension } = comic[0].thumbnail;
-	const {
-		title,
-		issueNumber,
-		pageCount,
-		dates,
-		prices,
-		description,
-	} = comic[0];
+	const { title, issueNumber, pageCount, dates, prices, description } =
+		comic[0];
 
 	const characters = comic[0].characters.items;
 	const price = prices[0].price * 5.24;
 
 	return (
-		<div className='overlay'>
+		<div className='overlay' onClick={closeComicModal}>
 			<div className='modalContainer'>
 				<button type='button' onClick={closeComicModal}>
 					<AiOutlineClose className='closeIcon' />
