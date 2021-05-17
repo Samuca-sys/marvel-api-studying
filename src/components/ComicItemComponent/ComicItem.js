@@ -31,16 +31,18 @@ export default function ComicItem(props) {
 					<div className='itemDetails'>
 						<div>
 							<strong>Pages:</strong>
-							<span>{pageCount}</span>
+							<span>{pageCount === 0 ? 'Not available' : pageCount}</span>
 						</div>
 
 						<div>
 							<strong>Price:</strong>
 							<span>
-								{price.toLocaleString('pt-BR', {
-									style: 'currency',
-									currency: 'BRL',
-								})}
+								{price === 0.0
+									? '  Not available'
+									: price.toLocaleString('pt-BR', {
+											style: 'currency',
+											currency: 'BRL',
+									  })}
 							</span>
 						</div>
 					</div>

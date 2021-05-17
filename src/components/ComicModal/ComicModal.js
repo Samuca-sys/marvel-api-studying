@@ -36,7 +36,9 @@ export function ComicModal() {
 								<h1>{title}</h1>
 							</header>
 							<main>
-								<p>{description}</p>
+								<p>
+									{description === null ? '  No description.' : description}
+								</p>
 								<div className='modalDetails'>
 									<div>
 										<strong>Issue:</strong> <span>{issueNumber}</span>
@@ -47,15 +49,17 @@ export function ComicModal() {
 									</div>
 									<div>
 										<strong>Pages: </strong>
-										<span>{pageCount}</span>
+										<span>{pageCount === 0 ? 'Not available' : pageCount}</span>
 									</div>
 									<div>
 										<strong>Price: </strong>{' '}
 										<span>
-											{price.toLocaleString('pt-BR', {
-												style: 'currency',
-												currency: 'BRL',
-											})}
+											{price === 0.0
+												? '  Not available'
+												: price.toLocaleString('pt-BR', {
+														style: 'currency',
+														currency: 'BRL',
+												  })}
 										</span>
 									</div>
 								</div>
