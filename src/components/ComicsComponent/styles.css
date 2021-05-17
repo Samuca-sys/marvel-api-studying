@@ -22,11 +22,6 @@
 	}
 }
 
-@media only screen and (min-width: 1200px) {
-	.comicsContainer {
-	}
-}
-
 .comicsContainer {
 	max-width: 1200px;
 	margin: 0 auto;
