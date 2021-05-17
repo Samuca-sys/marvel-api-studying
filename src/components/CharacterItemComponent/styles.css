@@ -1,0 +1,105 @@
+@media only screen and (max-width: 600px) {
+	.characterDetails h1 {
+		font-size: 1.5rem;
+	}
+	.moreDetails span {
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.characterDetails h1 {
+		font-size: 1.25rem;
+	}
+	.moreDetails span {
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.characterDetails h1 {
+		font-size: 1.25rem;
+	}
+	.moreDetails span {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.character-thumbnail {
+		height: 20rem;
+	}
+	.characterDetails h1 {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.characterDetails h1 {
+		font-size: 1.25rem;
+	}
+}
+
+.characterContainer {
+	background-color: #f5f5f5;
+	border-radius: 1rem;
+	justify-content: flex-start;
+	cursor: pointer;
+	position: relative;
+}
+
+.characterContent {
+	cursor: pointer;
+}
+
+.character-thumbnail-container {
+	width: 100%;
+}
+
+.character-thumbnail {
+	width: 100%;
+	display: flex;
+}
+
+.characterDetails {
+	position: absolute;
+	background: #f5f5f5;
+	bottom: 0;
+	padding: 2rem 0;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	align-content: center;
+}
+
+.characterDetails h1 {
+	font-weight: 700;
+}
+
+.moreDetails {
+	position: absolute;
+	background: rgb(128, 128, 128, 0.5);
+	bottom: 0;
+	padding: 4rem 1rem;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	height: 100%;
+	transform: scale(1, 1);
+}
+
+.moreDetails div {
+	background: #f5f5f5;
+	padding: 0.5rem;
+}
+
+.moreDetails h1 {
+	margin-top: -3rem;
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	color: #f0141e;
+	background: #f5f5f5;
+}

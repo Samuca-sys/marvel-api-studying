@@ -1,12 +1,14 @@
 import { useContext } from 'react';
 
 import Spinner from 'react-spinkit';
-import { ComicContext } from '../../contexts/ComicContext';
+
+import { CharacterContext } from '../../contexts/CharacterContext';
+import CharacterItem from '../CharacterItemComponent/CharacterItem';
 
 import './styles.css';
 
 export function Characters() {
-	const { isLoading, comics } = useContext(ComicContext);
+	const { isLoading, characters } = useContext(CharacterContext);
 
 	return isLoading ? (
 		<div className='spinnerContainer'>
@@ -14,7 +16,9 @@ export function Characters() {
 		</div>
 	) : (
 		<div className='charactersContainer'>
-			<p>Characters</p>
+			{characters.map((item) => (
+				<CharacterItem key={item.id} character={item} />
+			))}
 		</div>
 	);
 }

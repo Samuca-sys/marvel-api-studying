@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { ModalContextProvider } from './contexts/ModalContext';
 import { ComicContextProvider } from './contexts/ComicContext';
+import { CharacterContextProvider } from './contexts/CharacterContext';
 
 import Routes from './routes/Routes';
 import NavBar from './components/NavBarComponent/NavBar';
@@ -13,10 +14,12 @@ function App() {
 	return (
 		<ModalContextProvider>
 			<ComicContextProvider>
-				<BrowserRouter>
-					<NavBar />
-					<Routes />
-				</BrowserRouter>
+				<CharacterContextProvider>
+					<BrowserRouter>
+						<NavBar />
+						<Routes />
+					</BrowserRouter>
+				</CharacterContextProvider>
 			</ComicContextProvider>
 		</ModalContextProvider>
 	);

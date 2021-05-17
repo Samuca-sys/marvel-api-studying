@@ -4,3 +4,45 @@
 	display: grid;
 	gap: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+	.charactersContainer {
+		width: calc(100% - 2rem);
+	}
+}
+@media only screen and (min-width: 600px) {
+	.charactersContainer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.charactersContainer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media only screen and (min-width: 992px) {
+	.charactersContainer {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.charactersContainer {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.spinnerContainer {
+	margin-top: 10rem;
+}
+
+.spinner {
+	color: #f0141e;
+	margin-left: 50%;
+	grid-template-columns: 1fr;
+}
+
+.charactersContainer {
+	width: calc(100% - 2rem);
+}
