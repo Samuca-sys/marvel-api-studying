@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import Search from '../SearchComponent/Search';
@@ -27,31 +27,42 @@ export default function NavBar() {
 	return (
 		<div className='headerContainer'>
 			<div className={click ? 'mobileContent' : 'headerContent'}>
-				{/* <div className='headerContent'> */}
-				<div class='menu' onClick={handleClick}>
+				<div className='menu' onClick={handleClick}>
 					{click ? <AiOutlineClose /> : <AiOutlineMenu />}
 				</div>
 				<div>
-					<img
-						className={click ? 'mobileLogo' : 'logoImage'}
-						// className='logoImage'
-						src={logo}
-						alt={'logo'}
-					/>
+					<Link to='/'>
+						<img
+							className={click ? 'mobileLogo' : 'logoImage'}
+							src={logo}
+							alt={'logo'}
+						/>
+					</Link>
 				</div>
 				<div className={click ? 'mobileButtons' : 'buttons'}>
-					{/* <div className='buttons'> */}
 					<nav>
-						<Link to='/comics' onClick={handleClick}>
+						<NavLink
+							exact={true}
+							activeClassName='active'
+							to='/'
+							onClick={() => {
+								handleClick();
+							}}
+						>
 							<AiOutlineBook /> <span>Comics</span>
-						</Link>
-						<Link to='/characters' onClick={handleClick}>
+						</NavLink>
+						<NavLink
+							activeClassName='active'
+							to='/characters'
+							onClick={() => {
+								handleClick();
+							}}
+						>
 							<AiOutlineUser /> <span>Characters</span>
-						</Link>
+						</NavLink>
 					</nav>
 				</div>
 				<div className={!click ? 'searchInput' : 'noSearch'}>
-					{/* <div> */}
 					<Search />
 				</div>
 			</div>
