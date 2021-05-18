@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState, useCallback } from 'react';
 
-import { api } from '../services/api';
+import { api, authKey } from '../services/api';
 
 export const CharacterContext = createContext();
 
@@ -14,7 +14,7 @@ export function CharacterContextProvider({ children }) {
 
 	const getCharacters = async function getCharacters() {
 		try {
-			const res = await api.get('/characters');
+			const res = await api.get(`characters?${authKey}`);
 			setCharacters(res.data.data.results);
 			setIsLoading(false);
 		} catch (error) {

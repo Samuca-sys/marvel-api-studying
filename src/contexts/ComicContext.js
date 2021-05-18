@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useCallback } from 'react';
 
-import { api } from '../services/api';
+import { api, authKey } from '../services/api';
 
 export const ComicContext = createContext();
 
@@ -14,7 +14,7 @@ export function ComicContextProvider({ children }) {
 
 	const getComics = async function getComics() {
 		try {
-			const res = await api.get('/comics', {
+			const res = await api.get(`comics?${authKey}`, {
 				params: {
 					format: 'comic',
 					noVariants: true,

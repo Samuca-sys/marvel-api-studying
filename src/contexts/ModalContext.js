@@ -2,7 +2,7 @@ import { createContext, useState, useEffect, useCallback } from 'react';
 
 import { ComicModal } from '../components/ComicModal/ComicModal';
 
-import { api } from '../services/api';
+import { api, authKey } from '../services/api';
 
 export const ModalContext = createContext();
 
@@ -15,7 +15,7 @@ export function ModalContextProvider({ children }) {
 	const getComic = useCallback(() => {
 		(async () => {
 			try {
-				const res = await api.get('/comics', {
+				const res = await api.get(`comics?${authKey}`, {
 					params: {
 						id: comicId,
 					},
