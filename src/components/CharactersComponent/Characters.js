@@ -2,6 +2,8 @@ import { useContext } from 'react';
 
 import Spinner from 'react-spinkit';
 
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
+
 import { CharacterContext } from '../../contexts/CharacterContext';
 import CharacterItem from '../CharacterItemComponent/CharacterItem';
 
@@ -22,7 +24,9 @@ export function Characters() {
 				))}
 			</div>
 			<div className='buttonMore'>
-				<button onClick={handleMore}>More</button>
+				<button onClick={handleMore}>
+					<IoIosArrowDropdownCircle size={20} />
+				</button>
 			</div>
 		</>
 	);

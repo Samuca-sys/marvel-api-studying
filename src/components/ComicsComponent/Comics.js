@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 
 import Spinner from 'react-spinkit';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
+
 import { ComicContext } from '../../contexts/ComicContext';
 
 import ComicItem from '../ComicItemComponent/ComicItem';
@@ -22,7 +24,9 @@ export function Comics() {
 				))}
 			</div>
 			<div className='buttonMore'>
-				<button onClick={handleMore}>More</button>
+				<button onClick={handleMore}>
+					<IoIosArrowDropdownCircle size={20} />
+				</button>
 			</div>
 		</>
 	);

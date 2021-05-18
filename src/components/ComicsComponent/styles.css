@@ -2,10 +2,16 @@
 	.comicsContainer {
 		width: calc(100% - 2rem);
 	}
+	.buttonMore button {
+		padding: 1rem 5rem;
+	}
 }
 @media only screen and (min-width: 600px) {
 	.comicsContainer {
 		width: calc(100% - 2rem);
+	}
+	.buttonMore button {
+		padding: 1rem 5rem;
 	}
 }
 
@@ -19,6 +25,16 @@
 	.comicsContainer {
 		grid-template-columns: repeat(3, 1fr);
 		width: calc(100% - 2rem);
+	}
+	.buttonMore button {
+		padding: 1rem 10rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.buttonMore button:hover {
+		background: var(--yellow);
+		color: var(--black);
 	}
 }
 
@@ -42,22 +58,15 @@
 	display: flex;
 	justify-content: center;
 }
-.pulseButton {
-	display: flex;
-	justify-content: center;
-}
 
 .buttonMore button {
 	background: var(--red);
 	margin: 1rem 2rem 0 2rem;
 	border-radius: 1rem 1rem 0 0;
-	padding: 1rem 10rem;
 	color: var(--white);
 	box-shadow: rgb(0 0 0 / 30%) 2px 2px 10px 1px;
 	cursor: pointer;
-}
-
-.buttonMore button:hover {
-	background: var(--yellow);
-	color: var(--black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
