@@ -24,6 +24,9 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	.info header h1 {
+		font-size: 1.25rem;
+	}
 	.info .modalDetails {
 		margin: 1rem;
 		display: inline-block;
@@ -98,6 +101,9 @@
 	.info main p {
 		display: flex;
 	}
+	.info header h1 {
+		font-size: 1.5rem;
+	}
 	.info .modalDetails {
 		margin-top: 1rem;
 	}
@@ -133,6 +139,7 @@
 	box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
 	text-align: center;
 	position: relative;
+	margin-top: 8rem;
 }
 
 .modalContainer button {
@@ -152,7 +159,6 @@
 
 .info header h1 {
 	font-weight: 700;
-	font-size: 1.5rem;
 }
 
 .info main p {
