@@ -1,8 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-
-import Search from '../SearchComponent/Search';
 
 import {
 	AiOutlineUser,
@@ -10,6 +8,7 @@ import {
 	AiOutlineMenu,
 	AiOutlineClose,
 } from 'react-icons/ai';
+import { IoIosArrowDropupCircle } from 'react-icons/io';
 
 import logo from '../../assets/images/logo.svg';
 import './styles.css';
@@ -17,11 +16,32 @@ import './styles.css';
 export default function NavBar() {
 	const [click, setClick] = useState(false);
 
+	const [isVisible, setIsVisible] = useState(false);
+
+	function toggleVisibility() {
+		if (window.pageYOffset > 100) {
+			setIsVisible(true);
+		} else {
+			setIsVisible(false);
+		}
+	}
+
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	}
+
 	function handleClick() {
 		if (isMobile) {
 			setClick(!click);
 		}
 	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', toggleVisibility);
+	}, []);
 
 	const isMobile = useMediaQuery({ query: '(max-device-width: 768px)' });
 	return (
@@ -31,7 +51,7 @@ export default function NavBar() {
 					{click ? <AiOutlineClose /> : <AiOutlineMenu />}
 				</div>
 				<div>
-					<Link to='/'>
+					<Link to='/' onClick={scrollToTop}>
 						<img
 							className={click ? 'mobileLogo' : 'logoImage'}
 							src={logo}
@@ -47,6 +67,7 @@ export default function NavBar() {
 							to='/'
 							onClick={() => {
 								handleClick();
+								scrollToTop();
 							}}
 						>
 							<AiOutlineBook /> <span>Comics</span>
@@ -56,15 +77,20 @@ export default function NavBar() {
 							to='/characters'
 							onClick={() => {
 								handleClick();
+								scrollToTop();
 							}}
 						>
 							<AiOutlineUser /> <span>Characters</span>
 						</NavLink>
 					</nav>
 				</div>
-				<div className={!click ? 'searchInput' : 'noSearch'}>
-					<Search />
-				</div>
+			</div>
+			<div className='scroll-to-top'>
+				{isVisible && (
+					<button onClick={scrollToTop}>
+						<IoIosArrowDropupCircle size={20} />
+					</button>
+				)}
 			</div>
 		</div>
 	);

@@ -5,8 +5,9 @@
 	.buttons {
 		display: none;
 	}
-	.searchInput {
-		margin: 0 auto;
+	.scroll-to-top button {
+		padding: 0.5rem;
+		border-radius: 1.5rem;
 	}
 }
 
@@ -20,8 +21,9 @@
 	.logoImage {
 		margin-left: 1rem;
 	}
-	.searchInput {
-		margin: 0 auto;
+	.scroll-to-top button {
+		padding: 0.5rem;
+		border-radius: 1.5rem;
 	}
 }
 @media only screen and (min-width: 768px) {
@@ -35,9 +37,6 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-	}
-	.searchInput {
-		margin: 0;
 	}
 }
 
@@ -54,11 +53,22 @@
 	.itemContent h1 {
 		font-size: 1.25rem;
 	}
+	.buttons nav a:last-child {
+		margin-right: 0;
+	}
+	.scroll-to-top button {
+		padding: 2rem;
+
+		border-radius: 2.5rem;
+	}
 }
 
 .headerContainer {
 	background: var(--red);
 	margin-bottom: 2rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
 }
 
 .headerContent {
@@ -112,6 +122,27 @@
 	font-weight: 700;
 }
 
+.scroll-to-top {
+	position: fixed;
+	bottom: 1rem;
+	right: 1.5rem;
+	animation: fadeIn 700ms ease-in-out 1s both;
+	cursor: pointer;
+}
+
+.scroll-to-top button {
+	background: var(--red);
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scroll-to-top button:hover {
+	background: var(--yellow);
+	color: var(--black);
+}
+
 /******************************************/
 
 .mobileContent {
@@ -142,9 +173,5 @@
 }
 
 .mobileLogo {
-	display: none;
-}
-
-.noSearch {
 	display: none;
 }
