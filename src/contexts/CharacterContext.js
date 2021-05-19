@@ -25,7 +25,7 @@ export function CharacterContextProvider({ children }) {
 	const handleMore = useCallback(async () => {
 		try {
 			const offset = characters.length;
-			const res = await api.get('/characters', {
+			const res = await api.get(`characters?${authKey}`, {
 				params: {
 					offset,
 					limit: 5,
