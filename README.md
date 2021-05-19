@@ -1,28 +1,38 @@
-## Marvel Character Finder
+## Marvel API Studying
 
 <div align="center" >
   <img src=".github/logo.svg" alt="Marvel logo" width="100px">
 </div>
 
-<div align="center" >This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</div>
+<div align="center" >This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app/).</div>
 
 <h4 align="center">
-  Marvel Character Finder is a web app mobile first for practicing API connection.
+  Marvel API Studying is a web app mobile first for practicing API connection.
 </h4>
 
+## Desktop
+
 <div align="center">
-  <img src=".github/desktop-no-modal.png" alt="desktop-no-modal">
-  <img src=".github/desktop-with-modal.png" alt="desktop-with-modal">
+  <img src=".github/desktop-characters.png" alt="desktop-characters">
+  <img src=".github/desktop-characters-scroll-top.png" alt="desktop-characters-scroll-top">
+  <img src=".github/desktop-comics-modal.png" alt="desktop-comics-modal">
 </div>
 
-<p align="center">
-  <img src=".github/tablet-no-modal.png" alt="tablet-no-modal"  width="450" >
-  <img src=".github/tablet-with-modal.png" alt="tablet-with-modal"  width="450">
-</p>
+## Tablet
 
 <p align="center">
-  <img src=".github/mobile-x-no-modal.png" alt="mobile-x-no-modal"  width="400">
-  <img src=".github/mobile-x-with-modal.png" alt="mobile-x-with-modal"  width="250">
+  <img src=".github/tablet-comics.png" alt="tablet-comics"  width="319">
+  <img src=".github/tablet-comics-scroll-top.png" alt="tablet-comics-scroll-top"  width="319">
+  <img src=".github/tablet-comics-modal.png" alt="tablet-comics-modal"  width="319">
+</p>
+
+## Mobile
+
+<p align="center">
+  <img src=".github/mobile-comics.png" alt="mobile-comics"  width="238">
+  <img src=".github/mobile-comics-responsive-menu.png" alt="mobile-comics-responsive-menu"  width="238">
+  <img src=".github/mobile-comics-scroll-top.png" alt="mobile-comics-scroll-top"  width="238">
+  <img src=".github/mobile-comics-modal.png" alt="mobile-comics-modal"  width="238">
 </p>
 
 
@@ -42,7 +52,7 @@ This project was developed using front-end technology and API from Marvel.
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/Samuca-sys/marvel-character-finder.git && cd marvel-character-finder
+$ git clone https://github.com/Samuca-sys/marvel-api-studying.git && cd marvel-api-studying
 ```
 
 **Follow the steps below**
@@ -67,4 +77,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with 💜 by Samuel Macedo 👋 [Check out my LinkedIn](https://www.linkedin.com/in/samuel-macedo-12a420a8)
+Made with 💜 by Samuel Macedo 👋 [Check out my LinkedIn](https://www.linkedin.com/in/samuel-macedo)
