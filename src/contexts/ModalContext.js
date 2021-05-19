@@ -45,6 +45,7 @@ export function ModalContextProvider({ children }) {
 
 	function closeComicModal() {
 		setIsComicModalOpen(false);
+		setComicId('');
 	}
 
 	function openComicModal() {
