@@ -31,7 +31,7 @@ export function ComicContextProvider({ children }) {
 	const handleMore = useCallback(async () => {
 		try {
 			const offset = comics.length;
-			const res = await api.get('/comics', {
+			const res = await api.get(`comics?${authKey}`, {
 				params: {
 					offset,
 					limit: 4,
